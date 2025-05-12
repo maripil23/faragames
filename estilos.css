@@ -147,7 +147,7 @@ header .encabezado {
 .gamplay div {
     display: block;
     width: 200%;
-    position: absolute;
+    position: relative;
     animation: marquee 12s linear infinite;
 }
 
