@@ -1,0 +1,222 @@
+/* Estructura base */
+body, html {
+    background-color: aliceblue;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.grid-contenedor {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: [first]25% [second]50% [third]25% [end];
+    grid-template-rows:
+        [firstrow]33% [fila2]33% [fila3]33% [fila4]33%
+        [fila5]33% [fila6]33% [fila7]33% [fila8]33%
+        [fila9]33% [ultimafila]33%;
+}
+
+/* HEADER normal, sin posición fija */
+header {
+    grid-column: first / end;
+    grid-row: firstrow;
+    position: relative;  
+    z-index: 10; 
+}
+
+header .encabezado {
+    background-color: #F3B7FA;
+    border: 1px solid #31C5F7;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* TÍTULO SUPERIOR */
+.titulonerea h1 {
+    position: absolute;
+    top: 25px;
+    left: 3%;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 4vw;
+    color: #2F23FA;
+    -webkit-text-stroke: 1px white;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    z-index: 100; /* más alto que el header */
+}
+
+/* GIF */
+.gifbynerea img {
+    position: absolute;
+    top: -20px;
+    left: 0%;
+    width: 30vw;
+    height: auto;
+    z-index: 100; /* más alto que el header */
+}
+
+/* BLOQUE TÍTULO CENTRAL */
+.titulo {
+    grid-column: second / second;
+    grid-row: fila2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.titulo h1 {
+    font-family: "Jockey One", sans-serif;
+    font-size: 9vw;
+    font-weight: 700;
+    color: #0F0349;
+    -webkit-text-stroke: 4px #E829FF;
+    
+    margin: 0;
+    margin-top: 8%;
+}
+
+.titulo h2 {
+    font-family: "Jersey 15", sans-serif;
+    justify-content: center;
+    font-size: 2.5vw;
+    color: white;
+    background-color: #F494FF;
+    margin: 0 auto;
+    width: max-content;
+    margin-top: -15%; /* Ajustado el margen superior para acercarlo más al h1 */
+    margin-left: 14%;
+    
+}
+
+.titulo img {
+    position: relative;
+    top: -40%;
+    left: -4%;
+    width: 28vw;
+    height: auto;
+    z-index: 1;
+}
+
+/* BRILLITOS */
+.brillitos img {
+    grid-column: second / second;
+    grid-row: fila2;
+    position: relative;
+    top: -70vh;
+    left: 105%;
+    width: 40vw;
+    height: auto;
+    z-index: 2;
+}
+
+/* Secciones extra (resumen) */
+.cta,
+.displaytwits,
+.memorianenita,
+.explicacion,
+.imagenmartin,
+.biografia,
+.formulario,
+.piedepagina {
+    grid-column: second;
+}
+
+/* GAMPLAY */
+.gamplay {
+    color: #DB0800;
+    font-family: "Jockey One", sans-serif;
+    height: 4.5vw;
+    overflow: hidden;
+    background-color: #F3B7FA;
+    border: 1px solid #31C5F7;
+    white-space: nowrap;
+    font-size: 4vw;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.gamplay div {
+    display: block;
+    width: 200%;
+    position: absolute;
+    animation: marquee 12s linear infinite;
+}
+
+.gamplay span {
+    float: left;
+    width: 50%;
+}
+
+@keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+}
+
+/* MEDIA QUERY MÓVIL */
+@media (max-width: 600px) {
+    .grid-contenedor {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(10, auto);
+    }
+
+    .gifbynerea img {
+        top: 0px;
+        left: 0%;
+        width: 40vw;
+    }
+
+    .titulonerea h1 {
+        top: 10px;
+        left: 5%;
+        font-size: 5vw;
+        -webkit-text-stroke: 0.5px white;
+    }
+    .titulo img {
+        margin-top: 0%;
+        left: -0%;
+        width: 40vw;
+    }
+    .titulo h1 {
+        font-size: 13vw;
+        word-spacing: 1;
+        -webkit-text-stroke: 2px #E829FF;
+        margin-top: 20%;
+        margin-left: 3.5%;
+    }
+
+    .titulo h2 {
+        font-size: 4.5vw;
+    }
+    .brillitos img {
+        top: 150px;
+        left: 25%;
+        width: 40vw;
+    }
+
+    .titulo,
+    .cta,
+    .displaytwits,
+    .memorianenita,
+    .explicacion,
+    .imagenmartin,
+    .biografia,
+    .formulario,
+    .piedepagina,
+    header {
+        grid-column: 1 / -1;
+        top: -34.5%;
+    }
+
+    .gamplay {
+        font-size: 100%;
+    }
+}
