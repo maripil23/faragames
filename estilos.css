@@ -78,11 +78,16 @@ header .encabezado {
     font-weight: 700;
     color: #0F0349;
     -webkit-text-stroke: 4px #E829FF;
-    
+    word-spacing: 100%;
     margin: 0;
     margin-top: 8%;
 }
-
+.titulo h3{
+    font-family: "Jersey 15", sans-serif;
+    font-size: 5vw;
+    margin-top: -60%;
+    word-spacing: 1500%;
+}
 .titulo h2 {
     font-family: "Jersey 15", sans-serif;
     justify-content: center;
@@ -91,15 +96,15 @@ header .encabezado {
     background-color: #F494FF;
     margin: 0 auto;
     width: max-content;
-    margin-top: -15%; /* Ajustado el margen superior para acercarlo más al h1 */
-    margin-left: 14%;
+    margin-top: 0%; /* Ajustado el margen superior para acercarlo más al h1 */
+    margin-left: 9%;
     
 }
 
 .titulo img {
     position: relative;
     top: -40%;
-    left: -4%;
+    left: -1%;
     width: 28vw;
     height: auto;
     z-index: 1;
@@ -110,14 +115,13 @@ header .encabezado {
     grid-column: second / second;
     grid-row: fila2;
     position: relative;
-    top: -70vh;
+    top: -80vh;
     left: 105%;
     width: 40vw;
     height: auto;
     z-index: 2;
 }
 
-/* Secciones extra (resumen) */
 .cta,
 .displaytwits,
 .memorianenita,
@@ -129,8 +133,68 @@ header .encabezado {
     grid-column: second;
 }
 
+.cta{
+    grid-row: fila3;
+     border: 4px solid #2F23FA;
+     width: 40%;
+     height:auto;
+     margin-left: 28%;
+}
+.cta h2{
+    font-family: "Jersey 15", sans-serif;
+    font-size: 2.3vw;
+    justify-content: center;
+    text-align: center;
+}
+.cta p{
+    font-family: "Jost", sans-serif;
+    font-weight: bold;
+    font-size: 1.5vw;
+    justify-content: center;
+    text-align: center;
+}
+.vervideo{
+    background-color: #2F23FA;
+     font-family: "Jockey One", sans-serif;
+     font-weight: bold;
+      font-size: 2vw;
+      color: white;
+      justify-content: center;
+      text-align: center;
+      
+}
+.tweet1{
+    grid-row: fila4;
+    width: 30vw;
+    margin-left: 15%;
+    margin-top: 5%;
+}
+.tweet2{
+    grid-row: fila4;
+    width: 30vw;
+    margin-left: 35%;
+    margin-top: 2%;
+}
+.tweet3{
+    grid-row: fila4;
+    width: 30vw;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+.tweet4{
+    grid-row: fila4;
+    width: 30vw;
+    margin-left: 20%;
+    margin-top: 2%;
+}
+.giffondobrillos{
+    grid-row: fila5;
+    width: 100%;
+    margin-top: -10%;
+}
 /* GAMPLAY */
 .gamplay {
+    
     color: #DB0800;
     font-family: "Jockey One", sans-serif;
     height: 4.5vw;
@@ -188,7 +252,7 @@ header .encabezado {
     .titulo h1 {
         font-size: 13vw;
         word-spacing: 1;
-        -webkit-text-stroke: 2px #E829FF;
+        -webkit-text-stroke: 1px #E829FF;
         margin-top: 20%;
         margin-left: 3.5%;
     }
