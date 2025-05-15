@@ -291,7 +291,7 @@ html body{
     display: flex;
     flex-direction: column; /* uno debajo del otro */
     align-items: center;
-    margin-left: 2rem;
+    margin-left: -6rem;
     
   }
     .mobicom-img {
