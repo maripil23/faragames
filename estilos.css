@@ -1,286 +1,210 @@
-/* Estructura base */
-body, html {
-    background-color: aliceblue;
-    min-height: 100vh;
+html body{
     margin: 0;
     padding: 0;
+    background-color: azure;
 }
+ .marquee-container {
+      width: 100%;
+      border: 3px solid #31C5F7;
+      background-color: #F3B7FA;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      padding: 5px 0;
+    }
 
-.grid-contenedor {
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-columns: [first]25% [second]50% [third]25% [end];
-    grid-template-rows:
-        [firstrow]33% [fila2]33% [fila3]33% [fila4]33%
-        [fila5]33% [fila6]33% [fila7]33% [fila8]33%
-        [fila9]33% [ultimafila]33%;
-}
+    .marquee-text {
+      display: inline-block;
+     animation: marquee 12s linear infinite;
+      font-weight: bold;
+      font-size: 2rem;
+       font-family: "Jockey One", sans-serif;
+      color: #DB0800;
+       text-shadow:
+        -1px -1px 0 #E829FF,
+         1px -1px 0 #E829FF,
+        -1px  1px 0 #E829FF,
+         1px  1px 0 #E829FF;
+    }
 
-/* HEADER normal, sin posición fija */
-header {
-    grid-column: first / end;
-    grid-row: firstrow;
-    position: relative;  
-    z-index: 10; 
-}
-
-header .encabezado {
-    background-color: #F3B7FA;
-    border: 1px solid #31C5F7;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-/* TÍTULO SUPERIOR */
-.titulonerea h1 {
-    position: absolute;
-    top: 25px;
-    left: 3%;
-    font-family: "Jersey 15", sans-serif;
-    font-size: 4vw;
-    color: #2F23FA;
-    -webkit-text-stroke: 1px white;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-    z-index: 100; /* más alto que el header */
-}
-
-/* GIF */
-.gifbynerea img {
-    position: absolute;
-    top: -20px;
-    left: 0%;
-    width: 30vw;
-    height: auto;
-    z-index: 100; /* más alto que el header */
-}
-
-/* BLOQUE TÍTULO CENTRAL */
-.titulo {
-    grid-column: second / second;
-    grid-row: fila2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    text-align: center;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.titulo h1 {
-    font-family: "Jockey One", sans-serif;
-    font-size: 9vw;
-    font-weight: 700;
-    color: #0F0349;
-    -webkit-text-stroke: 4px #E829FF;
-    word-spacing: 100%;
-    margin: 0;
-    margin-top: 8%;
-}
-.titulo h3{
-    font-family: "Jersey 15", sans-serif;
-    font-size: 5vw;
-    margin-top: -60%;
-    word-spacing: 1500%;
-}
-.titulo h2 {
-    font-family: "Jersey 15", sans-serif;
-    justify-content: center;
-    font-size: 2.5vw;
-    color: white;
-    background-color: #F494FF;
-    margin: 0 auto;
-    width: max-content;
-    margin-top: 0%; /* Ajustado el margen superior para acercarlo más al h1 */
-    margin-left: 9%;
-    
-}
-
-.titulo img {
-    position: relative;
-    top: -40%;
-    left: -1%;
-    width: 28vw;
-    height: auto;
-    z-index: 1;
-}
-
-/* BRILLITOS */
-.brillitos img {
-    grid-column: second / second;
-    grid-row: fila2;
-    position: relative;
-    top: -80vh;
-    left: 105%;
-    width: 40vw;
-    height: auto;
-    z-index: 2;
-}
-
-.cta,
-.displaytwits,
-.memorianenita,
-.explicacion,
-.imagenmartin,
-.biografia,
-.formulario,
-.piedepagina {
-    grid-column: second;
-}
-
-.cta{
-    grid-row: fila3;
-     border: 4px solid #2F23FA;
-     width: 40%;
-     height:auto;
-     margin-left: 28%;
-}
-.cta h2{
-    font-family: "Jersey 15", sans-serif;
-    font-size: 2.3vw;
-    justify-content: center;
-    text-align: center;
-}
-.cta p{
-    font-family: "Jost", sans-serif;
-    font-weight: bold;
-    font-size: 1.5vw;
-    justify-content: center;
-    text-align: center;
-}
-.vervideo{
-    background-color: #2F23FA;
-     font-family: "Jockey One", sans-serif;
-     font-weight: bold;
-      font-size: 2vw;
-      color: white;
-      justify-content: center;
-      text-align: center;
-      
-}
-.tweet1{
-    grid-row: fila4;
-    width: 30vw;
-    margin-left: 15%;
-    margin-top: 5%;
-}
-.tweet2{
-    grid-row: fila4;
-    width: 30vw;
-    margin-left: 35%;
-    margin-top: 2%;
-}
-.tweet3{
-    grid-row: fila4;
-    width: 30vw;
-    margin-left: 5%;
-    margin-top: 2%;
-}
-.tweet4{
-    grid-row: fila4;
-    width: 30vw;
-    margin-left: 20%;
-    margin-top: 2%;
-}
-.giffondobrillos{
-    grid-row: fila5;
-    width: 100%;
-    margin-top: -10%;
-}
-/* GAMPLAY */
-.gamplay {
-    
-    color: #DB0800;
-    font-family: "Jockey One", sans-serif;
-    height: 4.5vw;
-    overflow: hidden;
-    background-color: #F3B7FA;
-    border: 1px solid #31C5F7;
-    white-space: nowrap;
-    font-size: 4vw;
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-.gamplay div {
-    display: block;
-    width: 200%;
-    position: relative;
-    animation: marquee 12s linear infinite;
-}
-
-.gamplay span {
+.marquee span {
     float: left;
     width: 50%;
 }
 
-@keyframes marquee {
-    0% { left: 0; }
-    100% { left: -100%; }
+  @keyframes marquee {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+.floating-gif {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 9999;
+      height: auto;
+      width: 50vw; /* responsive: 25% del ancho de la pantalla */
+      max-width: 300px;
+      aspect-ratio: 1 / 1;
+    }
+
+    .floating-gif img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .gif-text {
+      position: absolute;
+      top: 25px;
+      left: 30px;
+      color: #2F23FA;
+      font-weight: bold;
+      font-size: 2rem;
+        font-family: "Jersey 15", sans-serif;
+      line-height: 1.2;
+      text-align: left;
+      text-shadow:
+        -2px -2px 0 #FFF,
+         2px -2px 0 #FFF,
+        -2px  2px 0 #FFF,
+         2px  2px 0 #FFF;
+      pointer-events: none;
+    }
+ .fara-games-title {
+      font-family: "Jockey One", sans-serif;
+      font-weight: bold;
+      color: #0F0349;
+      text-shadow: 
+        -2px -2px 0 #E829FF,
+         2px -2px 0 #E829FF,
+        -2px  2px 0 #E829FF,
+         2px  2px 0 #E829FF;
+      word-spacing: 8rem; /* Espacio entre palabras */
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+
+    /* Título responsivo usando Bootstrap */
+    .fara-games-title-large {
+      font-size: 6rem; /* Tamaño grande */
+    }
+    .martin-cirio-title {
+        font-family: "Jockey One", sans-serif;
+        color: #000000;
+        word-spacing: 15rem; /* Espacio entre palabras */
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+    .img-martina-wrapper {
+        position: relative;
+        width: 100%;
+        height: 0;
+     }
+     .img-martina {
+        position: absolute;
+        top: -15rem; /* Superpone la imagen */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px; /* Ajustá el tamaño que necesites */
+        max-width: 40vw;
+        height: auto;
+        z-index: 10;
+        pointer-events: none; /* Evita que tape clicks si no es interactiva */
+       }
+       .regreso-textos {
+         font-family: "Jersey 15", sans-serif;
+          margin-top: 6rem;
+          }
+
+     .bg-texto {
+     background-color: #F494FF;
+     display: block;
+     padding: 0rem ;
+     font-size: 1.7rem;
+     color: white;
+     text-align: center;
+     text-transform: uppercase;
+     width: fit-content;
+     margin-top: 0rem; 
+     margin: 0.2rem auto; 
+     
+     }
+     .brillibrilli-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -20rem; /* hace que se monte como solapa */
+  z-index: 9999;
 }
 
-/* MEDIA QUERY MÓVIL */
-@media (max-width: 600px) {
-    .grid-contenedor {
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(10, auto);
-    }
+.brillibrilli-gif {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  z-index: 5;
+}
 
-    .gifbynerea img {
-        top: 0px;
-        left: 0%;
-        width: 40vw;
-    }
 
-    .titulonerea h1 {
-        top: 10px;
-        left: 5%;
-        font-size: 5vw;
-        -webkit-text-stroke: 0.5px white;
-    }
-    .titulo img {
-        margin-top: 0%;
-        left: -0%;
-        width: 40vw;
-    }
-    .titulo h1 {
-        font-size: 13vw;
-        word-spacing: 1;
-        -webkit-text-stroke: 1px #E829FF;
-        margin-top: 20%;
-        margin-left: 3.5%;
-    }
-
-    .titulo h2 {
+      @media (max-width: 576px) {
+        .floating-gif{
+            width: 40vw;
+        }
+      .gif-text {
         font-size: 4.5vw;
+        top: 20px;
+      }
     }
-    .brillitos img {
-        top: 150px;
-        left: 25%;
-        width: 40vw;
-    }
-
-    .titulo,
-    .cta,
-    .displaytwits,
-    .memorianenita,
-    .explicacion,
-    .imagenmartin,
-    .biografia,
-    .formulario,
-    .piedepagina,
-    header {
-        grid-column: 1 / -1;
-        top: -34.5%;
+     @media (max-width: 992px) {
+      .fara-games-title-large {
+        font-size: 4rem; /* Ajustar tamaño en tabletas */
+      }
     }
 
-    .gamplay {
-        font-size: 100%;
+    @media (max-width: 768px) {
+      .fara-games-title-large {
+        font-size: 3rem; /* Ajustar tamaño en móviles grandes */
+      }
+        .martin-cirio-title {
+    font-size: 1.5rem;
+    word-spacing: 1rem;
+  }
+   .img-martina {
+    max-width: 40vw;
+    top: -3rem;
+  }
+  .regreso-line {
+    font-size: 1.4rem;
+  }
     }
-}
+
+    @media (max-width: 576px) {
+      .fara-games-title-large {
+        font-size: 2.5rem; /* Ajustar tamaño en móviles pequeños */
+        word-spacing: 5rem;
+        margin-left:20px;
+      }
+       .martin-cirio-title {
+    font-size: 1.2rem;
+    word-spacing: 10rem;
+  }
+  .img-martina {
+    max-width: 40vw;
+    top: -8rem;
+  }
+  .regreso-line {
+    font-size: 1.2rem;
+  }
+   .bg-texto {
+    font-size: 1rem;
+     margin-top: 0rem; 
+  }
+   .brillibrilli-container {
+     margin-top: -15rem; 
+     max-width: 100 px;
+   }
+    }
