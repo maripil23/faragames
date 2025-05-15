@@ -226,6 +226,62 @@ html body{
   z-index: 20;
   filter: invert(1); /* Si el fondo es oscuro, esto hace que el botón se vea blanco */
 }
+.texto-vuelta {
+  background-color: #FCDFFF;
+  font-family: "Jersey 15", sans-serif;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  text-shadow:
+    -2px -2px 0 #E829FF,
+     2px -2px 0 #E829FF,
+    -2px  2px 0 #E829FF,
+     2px  2px 0 #E829FF;
+  border-radius: 10px;
+}
+.tweet-img-container {
+  margin-bottom: 2rem;
+}
+
+.tweet-img {
+  max-width: 70%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.tweet-img:hover {
+  transform: scale(1.03);
+}
+  .memoria-text {
+      margin-top: 30rem;
+    font-family: 'Jersey 15', sans-serif;
+    margin-top: 100 rem;
+    font-size: 4rem;
+    color:  #2F23FA;
+    text-shadow: -1px -1px 0 #FFF, 3px -3px 0 #FFF, -3px 3px 0 #FFF, 3px 3px 0 #FFF;
+  }
+.juego-stack-horizontal {
+  
+    position: relative;
+  }
+
+  .juego-img-horizontal {
+    position: relative;
+    width: 350px;
+    margin-left: -50px;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    z-index: 200;
+    cursor: pointer;
+  }
+
+  .juego-img-horizontal:hover {
+    transform: scale(1.2);
+    z-index: 200;
+  }
+
+
 
       @media (max-width: 576px) {
         .floating-gif{
@@ -289,16 +345,16 @@ html body{
     font-size: 0.9rem;
     margin-top: 0.5rem;
     display: flex;
-    flex-direction: column; /* uno debajo del otro */
+    flex-direction: column; 
     align-items: center;
-    margin-left: -6rem;
+    margin-left:-6rem;
     
   }
     .mobicom-img {
     width: 200px;
     margin-top: 0.5rem;
     display: flex;
-    flex-direction: column; /* uno debajo del otro */
+    flex-direction: column; 
     align-items: center;
     margin-top: rem;
   }
@@ -307,4 +363,21 @@ html body{
     padding: 0.8rem 2rem;
     margin-top: 11rem;
   }
+  .texto-vuelta {
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
+.juego-img-horizontal {
+    position: relative;
+    width: 150px;
+    cursor: pointer;
+  }
+  .juego-img-horizontal:hover {
+    transform: scale(1.2);
+    z-index: 200;
+  }
+.memoria-text {
+margin-top: 7rem;
+  font-size: 1.8rem;
+}
     }
