@@ -46,7 +46,7 @@ html body{
       left: 0;
       z-index: 9999;
       height: auto;
-      width: 50vw; /* responsive: 25% del ancho de la pantalla */
+      width: 50vw; 
       max-width: 300px;
       aspect-ratio: 1 / 1;
     }
@@ -79,10 +79,10 @@ html body{
       font-weight: bold;
       color: #0F0349;
       text-shadow: 
-        -2px -2px 0 #E829FF,
-         2px -2px 0 #E829FF,
-        -2px  2px 0 #E829FF,
-         2px  2px 0 #E829FF;
+        -3px -3px 0 #E829FF,
+         3px -3px 0 #E829FF,
+        -3px  3px 0 #E829FF,
+         3px  3px 0 #E829FF;
       word-spacing: 8rem; /* Espacio entre palabras */
       margin-top: 50px;
       margin-left: 50px;
@@ -106,14 +106,14 @@ html body{
      }
      .img-martina {
         position: absolute;
-        top: -15rem; /* Superpone la imagen */
+        top: -15rem; 
         left: 50%;
         transform: translateX(-50%);
-        width: 300px; /* Ajustá el tamaño que necesites */
+        width: 300px; 
         max-width: 40vw;
         height: auto;
         z-index: 10;
-        pointer-events: none; /* Evita que tape clicks si no es interactiva */
+        pointer-events: none; 
        }
        .regreso-textos {
          font-family: "Jersey 15", sans-serif;
@@ -138,8 +138,8 @@ html body{
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: -20rem; /* hace que se monte como solapa */
-  z-index: 9999;
+  margin-top: -34rem; /* hace que se monte como solapa */
+  z-index: 10;
 }
 
 .brillibrilli-gif {
@@ -148,7 +148,84 @@ html body{
   height: auto;
   z-index: 5;
 }
+.promo-text-container {
+  display: flex;
+  justify-content: flex-start;   
+  padding-left: 10rem;
+  margin-top: 2rem;
+}
+.promo-text-row {
+  display: inline;
+  align-items: center;
+  padding-left: 0rem;
+  margin-top: 2rem;
+  
+}
 
+.promo-text {
+  font-family: "Jost", sans-serif;
+  color: black;
+  font-size: 1.5rem;
+  text-align: left;
+  max-width: 300px;
+  font-weight: bold;
+  margin-left: 25%;
+}
+.mobicom-img {
+  max-width: 300px;
+  height: auto;
+}
+.custom-gradient-btn {
+    padding: 1.5rem 2rem;
+    font-size: 1.9rem;
+    background: linear-gradient(to right, #7523FA, #2F23FA);
+    font-family: "Jockey One", sans-serif !important;
+    color: white !important;
+    margin-top: 20rem;
+  }
+
+  .modal-title-custom {
+    color: black;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  .custom-submit-btn {
+    background: linear-gradient(to right, #7523FA, #2F23FA);
+    font-family: "Jockey One", sans-serif !important;
+    color: white !important;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .modal-body input[type="text"],
+.modal-body input[type="email"] {
+  border: 2px solid #7523FA;
+  color: #7523FA;
+  font-size: 5 rem;
+  font-family: "Jersey 15", sans-serif;
+}
+
+/* Para que el placeholder también tenga ese color */
+.modal-body input::placeholder {
+  color: #7523FA;
+  opacity: 1; /* para que se vea bien en todos los navegadores */
+}
+.brillomodal-modal-header {
+  background-image: url("brillomodal.gif");
+  background-size: cover;
+  background-position: center;
+  height: 150px; 
+  position: relative;
+  border-bottom: none;
+}
+
+/* Aseguramos que el botón esté por encima del overlay */
+.brillomodal-modal-header .btn-close {
+  position: relative;
+  z-index: 20;
+  filter: invert(1); /* Si el fondo es oscuro, esto hace que el botón se vea blanco */
+}
 
       @media (max-width: 576px) {
         .floating-gif{
@@ -161,13 +238,13 @@ html body{
     }
      @media (max-width: 992px) {
       .fara-games-title-large {
-        font-size: 4rem; /* Ajustar tamaño en tabletas */
+        font-size: 4rem; 
       }
     }
 
     @media (max-width: 768px) {
       .fara-games-title-large {
-        font-size: 3rem; /* Ajustar tamaño en móviles grandes */
+        font-size: 3rem; 
       }
         .martin-cirio-title {
     font-size: 1.5rem;
@@ -184,7 +261,7 @@ html body{
 
     @media (max-width: 576px) {
       .fara-games-title-large {
-        font-size: 2.5rem; /* Ajustar tamaño en móviles pequeños */
+        font-size: 2.5rem; 
         word-spacing: 5rem;
         margin-left:20px;
       }
@@ -204,7 +281,30 @@ html body{
      margin-top: 0rem; 
   }
    .brillibrilli-container {
-     margin-top: -15rem; 
+     margin-top: -25rem; 
      max-width: 100 px;
    }
+
+  .promo-text {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column; /* uno debajo del otro */
+    align-items: center;
+    margin-left: 2rem;
+    
+  }
+    .mobicom-img {
+    width: 200px;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column; /* uno debajo del otro */
+    align-items: center;
+    margin-top: rem;
+  }
+  .custom-gradient-btn {
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+    margin-top: 11rem;
+  }
     }
