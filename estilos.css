@@ -275,9 +275,10 @@ cursor: url("apretado.png") 0 0, pointer;
    cursor: url("apretado.png") 0 0, pointer;
 }
 .memoria-section {
-  margin-top: 5rem; /* Ajustá este valor como quieras */
+  margin-top: 1rem; /* Ajustá este valor como quieras */
 }
   .memoria-text {
+    margin-top:15rem;
     font-family: 'Jersey 15', sans-serif;
     font-size: 4rem;
     color:  #2F23FA;
