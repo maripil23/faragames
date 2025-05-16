@@ -2,7 +2,13 @@ html body{
     margin: 0;
     padding: 0;
     background-color: azure;
+    cursor: url("cursor.png") 0 0, auto;
 }
+a:hover,
+button:hover {
+  cursor: url("apretado.png") 0 0, pointer;
+}
+
  .marquee-container {
       width: 100%;
       border: 3px solid #31C5F7;
@@ -183,7 +189,9 @@ html body{
     color: white !important;
     margin-top: 20rem;
   }
-
+.custom-gradient-btn:hover {
+ cursor: url("apretado.png") 0 0, pointer;
+}
   .modal-title-custom {
     color: black;
     font-family: "Jersey 15", sans-serif;
@@ -198,6 +206,9 @@ html body{
     padding: 0.5rem;
     font-size: 1.5rem;
   }
+  .custom-submit-btn:hover{
+    cursor: url("apretado.png") 0 0, pointer;
+  }
   .modal-body input[type="text"],
 .modal-body input[type="email"] {
   border: 2px solid #7523FA;
@@ -205,7 +216,13 @@ html body{
   font-size: 5 rem;
   font-family: "Jersey 15", sans-serif;
 }
-
+.modal-body input[type="text"],
+.modal-body input[type="email"]:hover {
+cursor: url("apretado.png") 0 0, pointer;
+}
+.btn-close:hover{
+cursor: url("apretado.png") 0 0, pointer;
+}
 /* Para que el placeholder también tenga ese color */
 .modal-body input::placeholder {
   color: #7523FA;
@@ -253,6 +270,7 @@ html body{
 
 .tweet-img:hover {
   transform: scale(1.03);
+   cursor: url("apretado.png") 0 0, pointer;
 }
 .memoria-section {
   margin-top: 5rem; /* Ajustá este valor como quieras */
@@ -266,7 +284,6 @@ html body{
     text-shadow: -1px -1px 0 #FFF, 3px -3px 0 #FFF, -3px 3px 0 #FFF, 3px 3px 0 #FFF;
   }
 .juego-stack-horizontal {
-  
     position: relative;
   }
 
@@ -283,6 +300,7 @@ html body{
   .juego-img-horizontal:hover {
     transform: scale(1.2);
     z-index: 300;
+    cursor: url("apretado.png") 0 0, pointer;
   }
 
 
