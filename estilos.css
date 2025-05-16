@@ -2,7 +2,9 @@ html body{
     margin: 0;
     padding: 0;
     background-color: azure;
-    cursor: url("cursor.png") 0 0, auto;
+}
+body{
+  cursor: url("cursor.png") 0 0, auto;
 }
 a:hover,
 button:hover {
@@ -273,12 +275,10 @@ cursor: url("apretado.png") 0 0, pointer;
    cursor: url("apretado.png") 0 0, pointer;
 }
 .memoria-section {
-  margin-top: 1rem; /* Ajustá este valor como quieras */
+  margin-top: 5rem; /* Ajustá este valor como quieras */
 }
   .memoria-text {
-      margin-top: 15rem;
     font-family: 'Jersey 15', sans-serif;
-    margin-top: 100 rem;
     font-size: 4rem;
     color:  #2F23FA;
     text-shadow: -1px -1px 0 #FFF, 3px -3px 0 #FFF, -3px 3px 0 #FFF, 3px 3px 0 #FFF;
