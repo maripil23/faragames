@@ -235,6 +235,22 @@ Además de sus videos | <b>publicó un libro autobiográfico</b> titulado "Pasar
     <img src="berta.png" alt="Berta" class="img-fluid berta-img">
   </div>
 </div>
+
+<div class="modal fade" id="modalFinalSegundo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content p-0 border-0 position-relative">
+      <div class="modal-header brillomodal-modal-header p-0"></div>
+      <div class="modal-body text-center px-4 py-5 d-flex flex-column align-items-center justify-content-center">
+        <p id="mensajeFinalSegundo" class="jost-text text-black fs-5 mb-4">
+          <!-- El JS escribe acá -->
+        </p>
+        <a href="index.html" class="btn btn-final mx-auto">Got it</a>
+        <img src="dino.png" alt="Dino" class="dino-modal-img">
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="modal fade" id="modalFinal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content p-0 border-0 position-relative">
@@ -294,6 +310,10 @@ Además de sus videos | <b>publicó un libro autobiográfico</b> titulado "Pasar
 
   const nombre = document.querySelector('input[type="text"]').value;
   const email = document.querySelector('input[type="email"]').value;
+  if (!nombre || !email) {
+      alert("Por favor completá tu nombre y tu email nenita 💅");
+      return;
+    }
 
   const mensaje = `Por siempre <b>${nombre}</b> mi alma está conectada a la tuya, para toda la eternidad. Así es y así será.<br>Revisá tu correo <b>${email}</b>!!!`;
   document.getElementById("mensajeFinal").innerHTML = mensaje;
@@ -301,11 +321,12 @@ Además de sus videos | <b>publicó un libro autobiográfico</b> titulado "Pasar
   const modalFinal = new bootstrap.Modal(document.getElementById("modalFinal"));
   modalFinal.show();
 });
-document.getElementById("botonFinal").addEventListener("click", function () {
+  document.getElementById("abrirModalFinal").addEventListener("click", function (e) {
+    e.preventDefault();
+
     const nombre = document.getElementById("nombreFinal").value.trim();
     const email = document.getElementById("emailFinal").value.trim();
 
-    // Validamos que no estén vacíos
     if (!nombre || !email) {
       alert("Por favor completá tu nombre y tu email nenita 💅");
       return;
@@ -313,10 +334,10 @@ document.getElementById("botonFinal").addEventListener("click", function () {
 
     const mensaje = `Por siempre <b>${nombre}</b> mi alma está conectada a la tuya, para toda la eternidad. Así es y así será.<br>Revisá tu correo <b>${email}</b>!!!`;
 
-    document.getElementById("mensajeFinal").innerHTML = mensaje;
+    document.getElementById("mensajeFinalSegundo").innerHTML = mensaje;
 
-    const modal = new bootstrap.Modal(document.getElementById("modalFinal"));
-    modal.show();
+    const nuevoModal = new bootstrap.Modal(document.getElementById("modalFinalSegundo"));
+    nuevoModal.show();
   });
 
 </script>
