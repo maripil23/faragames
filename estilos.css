@@ -1,0 +1,623 @@
+html body{
+    max-width: 1440px;
+    margin: 0;
+    padding: 0;
+    background-color: azure;
+    cursor: url("cursor.png") 0 0, auto;
+}
+a:hover,
+button:hover {
+  cursor: url("apretado.png") 0 0, pointer;
+}
+ .marquee-container {
+      width: 100%;
+      border: 3px solid #31C5F7;
+      background-color: #F3B7FA;
+      overflow: hidden;
+      white-space: nowrap;
+      box-sizing: border-box;
+      padding: 5px 0;
+    }
+    .marquee-text {
+      display: inline-block;
+     animation: marquee 12s linear infinite;
+      font-weight: bold;
+      font-size: 2rem;
+       font-family: "Jockey One", sans-serif;
+      color: #DB0800;
+       text-shadow:
+        -1px -1px 0 #E829FF,
+         1px -1px 0 #E829FF,
+        -1px  1px 0 #E829FF,
+         1px  1px 0 #E829FF;
+    }
+.marquee span {
+    float: left;
+    width: 50%;
+}
+  @keyframes marquee {
+      0% {
+        transform: translateX(0%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+.floating-gif {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 800;
+      height: auto;
+      width: 50vw; 
+      max-width: 300px;
+      aspect-ratio: 1 / 1;
+    }
+    .floating-gif img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .gif-text {
+      position: absolute;
+      top: 25px;
+      left: 30px;
+      color: #2F23FA;
+      font-weight: bold;
+      font-size: 2rem;
+        font-family: "Jersey 15", sans-serif;
+      line-height: 1.2;
+      text-align: left;
+      text-shadow:
+        -2px -2px 0 #FFF,
+         2px -2px 0 #FFF,
+        -2px  2px 0 #FFF,
+         2px  2px 0 #FFF;
+      pointer-events: none;
+    }
+  .fara-games-title {
+      font-family: "Jockey One", sans-serif;
+      font-weight: bold;
+      color: #0F0349;
+      text-shadow: 
+      -3px -3px 0 #E829FF,
+      3px -3px 0 #E829FF,
+      -3px  3px 0 #E829FF,
+      3px  3px 0 #E829FF;
+      word-spacing: 8rem; 
+      margin-top: 50px;
+      margin-left: 50px;
+    }
+    .fara-games-title-large {
+      font-size: 6rem; 
+    }
+    .martin-cirio-title {
+        font-family: "Jockey One", sans-serif;
+        color: #000000;
+        word-spacing: 15rem; 
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+    .img-martina-wrapper {
+        position: relative;
+        width: 100%;
+        height: 0;
+     }
+     .img-martina {
+        position: absolute;
+        top: -15rem; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 300px; 
+        max-width: 40vw;
+        height: auto;
+        z-index: 10;
+        pointer-events: none; 
+    }
+    .regreso-textos {
+    font-family: "Jersey 15", sans-serif;
+    padding-top: 1rem;
+    }
+  .bg-texto {
+    background-color: #F494FF;
+    display: block;
+    padding: 0rem ;
+    font-size: 1.7rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    width: fit-content;
+    margin-top: 0rem; 
+    margin: 0.2rem auto; 
+    }
+  .brillibrilli-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: -22rem; /* hace que se monte como solapa */
+  z-index: 10;
+}
+
+.brillibrilli-gif {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  z-index: 5;
+}
+.promo-section {
+  margin-top: 11rem;
+}
+.promo-text-container {
+  display: flex;
+  justify-content: flex-start;   
+  padding-left: 10rem;
+  margin-top: 2rem;
+}
+.promo-text-row {
+  display: inline;
+  align-items: center;
+}
+.promo-text {
+  font-family: "Jost", sans-serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: black;
+}
+.mobicom-img {
+  height: auto;
+}
+.custom-gradient-btn {
+    padding: 1rem 2rem;
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #7523FA, #2F23FA);
+    font-family: "Jockey One", sans-serif !important;
+    color: white !important;
+    margin-top: 0 !important;
+  }
+.custom-gradient-btn:hover {
+ cursor: url("apretado.png") 0 0, pointer;
+}
+  .modal-title-custom {
+    color: black;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .custom-submit-btn {
+    background: linear-gradient(to right, #7523FA, #2F23FA);
+    font-family: "Jockey One", sans-serif !important;
+    color: white !important;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .custom-submit-btn:hover{
+    cursor: url("apretado.png") 0 0, pointer;
+  }
+  .modal-body input[type="text"],
+.modal-body input[type="email"] {
+  border: 2px solid #7523FA;
+  color: #7523FA;
+  font-size: 5 rem;
+  font-family: "Jersey 15", sans-serif;
+  border-radius: 0%;
+}
+.modal-body input[type="text"],
+.modal-body input[type="email"]:hover {
+cursor: url("apretado.png") 0 0, pointer;
+}
+.modal-body input::placeholder {
+  color: #7523FA;
+  opacity: 1; 
+}
+.brillomodal-modal-header {
+    background-image: url("brillomodal.gif");
+    background-size: cover;
+    background-position: center;
+    height: 3rem; 
+    position: relative;
+    border-bottom: none;
+    border-radius: 0%;
+  }
+   .custom-close-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+.custom-close-btn img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+  .btn-close:hover{
+cursor: url("apretado.png") 0 0, pointer;
+}
+  .brillomodal-modal-header .btn-close {
+    position: relative;
+    z-index: 20;
+    filter: invert(1);
+  }
+.texto-vuelta {
+  background-color: #FCDFFF;
+  font-family: "Jersey 15", sans-serif;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem;
+  text-shadow:
+    -2px -2px 0 #E829FF,
+     2px -2px 0 #E829FF,
+    -2px  2px 0 #E829FF,
+     2px  2px 0 #E829FF;
+  border-radius: 10px;
+  margin-top: -15rem;
+  margin-bottom:11rem;
+}
+.tweet-img-container {
+  margin-top: -5rem;
+  margin-bottom: 4rem;
+}
+.tweet-img {
+  max-width: 70%;
+  margin-top: 2rem;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.tweet-img:hover {
+  transform: scale(1.03);
+  cursor: url("apretado.png") 0 0, pointer;
+}
+.memoria-section {
+  margin-top: 5rem; /* Ajustá este valor como quieras */
+}
+  .memoria-text {
+    margin-top: 15rem;
+    font-family: 'Jersey 15', sans-serif;
+    font-size: 4rem;
+    color:  #2F23FA;
+    text-shadow: -1px -1px 0 #FFF, 3px -3px 0 #FFF, -3px 3px 0 #FFF, 3px 3px 0 #FFF;
+  }
+.juego-stack-horizontal {
+    position: relative;
+    margin-left: 2rem;
+  }
+  .juego-img-horizontal {
+    position: relative;
+    width: 350px;
+    margin-left: -50px;
+    overflow: visible;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    z-index: 200;
+    cursor: pointer;
+  }
+  .juego-img-horizontal:hover {
+    transform: scale(1.2);
+    z-index: 300;
+    cursor: url("apretado.png") 0 0, pointer;
+  }
+  .juego-img-horizontal.clicked {
+  transform: scale(1.2);
+  z-index: 300;
+}
+.cuadrado-gradient {
+  width: 250px;
+  height: 200px;
+  background: linear-gradient(135deg, #D5BAFF, #EEE3FF);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+.cuadrado-1{
+  width: 310px;
+  height: 190px;
+  margin-right: 6rem ;
+}
+.cuadrado-2{
+  width: 300px;
+  height: 250px;
+  margin-left: 5rem;
+  margin-top: 5rem;
+}
+.cuadrado-3{
+  width: 320px;
+  height: 260px;
+  margin-right: 10rem ;
+  margin-top: 5rem;
+}
+.cuadrado-superpuesto {
+  position: absolute;
+  background: linear-gradient(135deg, #F3B7FA, #F8D3FD);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+
+.cuadrado-borde-blanco1 {
+  width: 17rem;
+  height: 10rem;
+  border-radius: 1rem;
+  border: 0.5rem solid white;
+  box-sizing: border-box;
+}
+.cuadrado-borde-blanco1 h3 {
+  font-family: "Jost", sans-serif;
+  font-size: 1.1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: black ;
+}
+.cuadrado-borde-blanco2 {
+  width: 16rem;
+  height: 12.5rem;
+  border-radius: 1rem;
+  border: 0.5rem solid white;
+  box-sizing: border-box;
+}
+.cuadrado-borde-blanco3 {
+  width: 17rem;
+  height: 13rem;
+  border-radius: 1rem;
+  border: 0.5rem solid white;
+  box-sizing: border-box;
+}
+
+/* Match con tamaños de los cuadrados principales */
+.cuadrado-1-superpuesto {
+  width: 310px;
+  height: 200px;
+  top: -3rem;
+  right: 5rem;
+}
+
+.cuadrado-2-superpuesto {
+  width: 300px;
+  height: 250px;
+  top: 3rem;
+  left: 8rem;
+}
+
+.cuadrado-3-superpuesto {
+  width: 320px;
+  height: 260px;
+  top: 2rem;
+  left: 28rem;
+}
+.martinacompu-img {
+  border: 6px solid #E829FF;
+  max-width: 100%;
+  height: auto;
+  margin-top: 2rem;
+}
+.custom-box {
+  position: relative;
+  margin-left: 15.2rem;
+  width: 50rem;
+  height: auto;
+  background-color: white;
+  border: 5px solid #B587FF;
+  overflow: hidden;
+}
+.custom-box h5{
+  font-family: "Jost", sans-serif;
+  padding: 2rem 2rem;
+  color: #260F94 ;
+}
+.custom-box-header {
+  background-color: #B587FF;
+}
+.custom-box-title {
+  color: white;
+  font-family: "Jersey 15", sans-serif;
+  font-size: 2.4rem;
+  padding-left: 0.8rem;
+}
+.imagenes-sobre-container {
+  margin-top: -10rem; /* Ajustá esto para superponerlas visualmente */
+  padding: 0 15rem;
+  z-index: 2;
+  position: relative;
+}
+.imagen-borde-izquierda{
+max-width:200px;
+height: auto;
+}
+.imagen-borde-derecha {
+  max-width: 300px;
+  height: auto;
+}
+.final-container {
+  background-color: #DCC7FF;
+  height:auto;
+  position: relative;
+  overflow: hidden;
+  padding-top: 0rem;
+  padding-bottom: 0 !important;
+}
+.textoform h5{
+  font-size: 2.1rem;
+}
+.final-container input[type="text"],
+.final-container input[type="email"] {
+  border: 3px solid #7523FA;
+  color: #7523FA;
+  font-size: 1.5rem;
+  font-family: "Jersey 15", sans-serif;
+  border-radius: 0%;
+}
+.final-container input::placeholder {
+  color: #7523FA;
+  opacity: 1;
+}
+.berta-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -5rem;
+  position: relative;
+}
+.berta-img {
+  max-width: 10rem;
+  height: auto;
+  transform: translateY(10px); /* la baja para que sobresalga */
+}
+.jost-text {
+  font-family: 'Jost', sans-serif;
+  color: black;
+}
+
+.btn-final {
+  background: linear-gradient(to right, #2F23FA, #7523FA);
+  color: white;
+  font-family: 'Jost', sans-serif;
+  border: none;
+  font-size: 1rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  z-index: 2;
+  position: relative;
+}
+.modal-content {
+  border: 3px solid black !important;
+  border-radius: 0 !important;
+}
+.dino-modal-img {
+  position: absolute;
+  bottom: 3rem;
+  left: -1rem;
+  width: 7rem;
+  height: auto;
+  transform: translateY(40%) rotate(23deg);
+  z-index: 1;
+}
+
+.footer-link {
+    font-family: 'Jost', sans-serif;
+    text-decoration: underline;
+    color: black;
+    text-decoration-color: #2F23FA;
+}
+  .footer-link:hover {
+    color: #7523FA;
+    text-decoration-color: #7523FA;
+  }
+      @media (max-width: 576px) {
+        .floating-gif{
+            width: 40vw;
+        }
+      .gif-text {
+        font-size: 4.5vw;
+        top: 20px;
+      }
+    }
+      @media (max-width: 992px) {
+      .fara-games-title-large {
+        font-size: 4rem; 
+      }
+    }
+    @media (max-width: 768px) {
+      .fara-games-title-large {
+        font-size: 3rem; 
+      }
+        .martin-cirio-title {
+    font-size: 1.5rem;
+    word-spacing: 1rem;
+  }
+    .img-martina {
+    max-width: 40vw;
+    top: -3rem;
+  }
+  .regreso-line {
+    font-size: 1.4rem;
+  }
+    }
+    @media (max-width: 576px) {
+      .fara-games-title-large {
+        font-size: 2.5rem; 
+        word-spacing: 5rem;
+        margin-left:20px;
+      }
+    .martin-cirio-title {
+    font-size: 1.2rem;
+    word-spacing: 10rem;
+  }
+  .img-martina {
+    max-width: 40vw;
+    top: -8rem;
+  }
+  .regreso-line {
+    font-size: 1.2rem;
+  }
+  .bg-texto {
+    font-size: 1rem;
+    margin-top: 0rem; 
+  }
+  .brillibrilli-container {
+    margin-top: -34rem; 
+    max-width: 100 px;
+    }
+  .promo-text {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-left:-6rem;
+    
+  }
+    .mobicom-img {
+    width: 1rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+  }
+  .custom-gradient-btn {
+    font-size: 1.2rem;
+    padding: 0.8rem 2rem;
+    margin-top: 11rem;
+  }
+  .texto-vuelta {
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
+.juego-img-horizontal {
+    position: relative;
+    width: 150px;
+    cursor: pointer;
+  }
+  .juego-img-horizontal:hover {
+    transform: scale(1.2);
+    z-index: 200;
+  }
+.memoria-text {
+margin-top: 7rem;
+  font-size: 1.8rem;
+}
+  .cuadrado-gradient {
+    width: 220px;
+    height: 150px;
+    margin: auto;
+  }
+  .cuadrado-1,
+  .cuadrado-2,
+  .cuadrado-3 {
+    margin: 0 auto;
+  }
+    .berta-img {
+    max-width: 60px;
+    margin-top: 2rem;
+  }
+    .cuadrado-gradient {
+    width: 150px;
+    height: 150px;
+  }
+    }
