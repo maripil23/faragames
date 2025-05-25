@@ -65,14 +65,14 @@
 
     <!-- Botón -->
     <div class="order-3 order-md-2">
-      <button type="button" class="btn custom-gradient-btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      <button type="button" class="btn custom-gradient-btn vervideo" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Ver Video
       </button>
     </div>
 
     <!-- Imagen -->
     <div class="order-2 order-md-3">
-      <img src="mobicom.png" alt="Mobicom" class="img-fluid" style="max-width: 320px;">
+      <img src="mobicom.png" alt="Mobicom" class="img-fluid">
     </div>
   </div>
 </div>
@@ -94,7 +94,7 @@
           <div class="mb-3">
             <input type="email" class="form-control" placeholder="Email">
           </div>
-          <button type="submit" class="btn custom-submit-btn w-50 mx-auto d-block">ANOTATE O A CHACA</button>
+          <button type="submit" class="btn custom-submit-btn w-50">ANOTATE O A CHACA</button>
         </form>
       </div>
     </div>
@@ -110,7 +110,7 @@
 </div>
   </div>
 </div>
-<div class="container my-5">
+<div class="container containertwits my-5">
   <div class="row justify-content-center tweet-zigzag">
     <div class="col-12 col-md-8 tweet-img-container text-start">
       <img src="tweet1.jpg" alt="Tweet 1" class="img-fluid tweet-img">
@@ -218,15 +218,17 @@ Además de sus videos | <b>publicó un libro autobiográfico</b> titulado "Pasar
       </h5>
       <form id="finalForm">
         <div class="mb-3">
-          <input type="text" class="form-control" placeholder="Nombre" id="nombreFinal">
-        </div>
-        <div class="mb-3">
-        <input type="email" class="form-control" placeholder="Email" id="emailFinal">
-        </div>
-        <button type="button" id="abrirModalFinal" class="btn custom-submit-btn w-50 mx-auto d-block">
+            <input type="text" class="form-control" placeholder="Nombre">
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email">
+          </div>
+      </form>
+      <div class="order-3 order-md-2">
+    <button type="button" class="btn custom-gradient-btn btn-final w-50" id="btnFinalForm" data-bs-toggle="modal" data-bs-target="#modalFinal">
   ANOTATE O A CHACA
 </button>
-      </form>
+    </div>
     </div>
   </div>
 
@@ -259,7 +261,7 @@ Además de sus videos | <b>publicó un libro autobiográfico</b> titulado "Pasar
         <p id="mensajeFinal" class="jost-text text-black fs-5 mb-4">
           <!-- Este texto se llenará desde JS -->
         </p>
-        <a href="index.html" class="btn btn-final mx-auto">Got it</a>
+        <a href="index.html" class="btn btn-final gotit mx-auto">Got it</a>
         <img src="dino.png" alt="Dino" class="dino-modal-img">
       </div>
     </div>
@@ -270,7 +272,7 @@ Además de sus videos | <b>publicó un libro autobiográfico</b> titulado "Pasar
 
     <!-- Icono izquierda -->
     <div class="d-flex align-items-center me-3">
-      <img src="icon.png" alt="Icon" style="max-height: 40px; margin-right: 20px;">
+      <img src="icon.png" class="icon" alt="Icon">
     </div>
 
     <!-- Links del medio -->
@@ -283,15 +285,15 @@ Además de sus videos | <b>publicó un libro autobiográfico</b> titulado "Pasar
     <!-- Redes derecha -->
     <div class="d-flex align-items-center gap-2 ms-3">
       <a href="https://www.instagram.com/martincirio/" target="_blank">
-        <img src="ig.png" alt="Instagram" style="height: 30px;">
+        <img src="ig.png" class="redessociales" alt="Instagram">
       </a>
       <img src="palito.png" alt="Palito" style="height: 20px;">
       <a href="https://www.youtube.com/@Faragames009" target="_blank">
-        <img src="youtube.png" alt="YouTube" style="height: 30px;">
+        <img src="youtube.png" class="redessociales" alt="YouTube">
       </a>
       <img src="palito.png" alt="Palito" style="height: 20px;">
       <a href="https://www.twitch.tv/martinciriook" target="_blank">
-        <img src="twitch.png" alt="Twitch" style="height: 30px;">
+        <img src="twitch.png" class="redessociales" alt="Twitch">
       </a>
     </div>
   </div>
@@ -321,11 +323,9 @@ Además de sus videos | <b>publicó un libro autobiográfico</b> titulado "Pasar
   const modalFinal = new bootstrap.Modal(document.getElementById("modalFinal"));
   modalFinal.show();
 });
-  document.getElementById("abrirModalFinal").addEventListener("click", function (e) {
-    e.preventDefault();
-
-    const nombre = document.getElementById("nombreFinal").value.trim();
-    const email = document.getElementById("emailFinal").value.trim();
+document.getElementById("btnFinalForm").addEventListener("click", function () {
+    const nombre = document.querySelector("#finalForm input[placeholder='Nombre']").value.trim();
+    const email = document.querySelector("#finalForm input[placeholder='Email']").value.trim();
 
     if (!nombre || !email) {
       alert("Por favor completá tu nombre y tu email nenita 💅");
@@ -333,11 +333,7 @@ Además de sus videos | <b>publicó un libro autobiográfico</b> titulado "Pasar
     }
 
     const mensaje = `Por siempre <b>${nombre}</b> mi alma está conectada a la tuya, para toda la eternidad. Así es y así será.<br>Revisá tu correo <b>${email}</b>!!!`;
-
-    document.getElementById("mensajeFinalSegundo").innerHTML = mensaje;
-
-    const nuevoModal = new bootstrap.Modal(document.getElementById("modalFinalSegundo"));
-    nuevoModal.show();
+    document.getElementById("mensajeFinal").innerHTML = mensaje;
   });
 
 </script>
