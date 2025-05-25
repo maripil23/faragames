@@ -1,16 +1,19 @@
 html body{
     max-width: 1440px;
-    margin: 0;
-    padding: 0;
-    background-color: azure;
-    cursor: url("cursor.png") 0 0, auto;
+  margin: 0 auto; /* Centra horizontalmente */
+  padding: 0;
+  background-color: rgb(255, 255, 255);
+  cursor: url("cursor.png") 0 0, auto;
+  width: 100%;          /* Asegura que siempre ocupe el 100% */
+  overflow-x: hidden;   /* Previene scroll horizontal si algo se desborda */
+  box-sizing: border-box;
 }
 a:hover,
 button:hover {
   cursor: url("apretado.png") 0 0, pointer;
 }
  .marquee-container {
-      width: 100%;
+      width: 104%;
       border: 3px solid #31C5F7;
       background-color: #F3B7FA;
       overflow: hidden;
@@ -135,7 +138,7 @@ button:hover {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: -22rem; /* hace que se monte como solapa */
+  margin-top: -22rem; 
   z-index: 10;
 }
 
@@ -147,6 +150,9 @@ button:hover {
 }
 .promo-section {
   margin-top: 11rem;
+}
+.promo-section img {
+max-width: 320px;
 }
 .promo-text-container {
   display: flex;
@@ -178,11 +184,15 @@ button:hover {
 .custom-gradient-btn:hover {
  cursor: url("apretado.png") 0 0, pointer;
 }
+.vervideo{
+  border-radius: 0%;
+  padding: 0.5rem 1.5rem;
+}
   .modal-title-custom {
     color: black;
     font-family: "Jersey 15", sans-serif;
-    font-size: 1.4rem;
-    text-align: center;
+    font-size: 1.1rem;
+    text-align: left;
   }
 
   .custom-submit-btn {
@@ -190,14 +200,16 @@ button:hover {
     font-family: "Jockey One", sans-serif !important;
     color: white !important;
     padding: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 0;
+    
   }
   .custom-submit-btn:hover{
     cursor: url("apretado.png") 0 0, pointer;
   }
   .modal-body input[type="text"],
 .modal-body input[type="email"] {
-  border: 2px solid #7523FA;
+  border: 2px solid #2F23FA;
   color: #7523FA;
   font-size: 5 rem;
   font-family: "Jersey 15", sans-serif;
@@ -309,10 +321,10 @@ cursor: url("apretado.png") 0 0, pointer;
 }
 .img-corner-zolapa {
   position: absolute;
-  bottom: -2rem; /* Toca el piso del cuadrado */
+  bottom: -2rem; 
   left: -1rem;
-  height: 8rem; /* Tamaño chico */
-  z-index: 5; /* Para que esté sobre el cuadrado superpuesto */
+  height: 8rem; 
+  z-index: 5; 
 }
 .martinsinremera {
   transform: translateX(-20%) rotate(-2deg);
@@ -483,7 +495,7 @@ cursor: url("apretado.png") 0 0, pointer;
   padding-left: 0.8rem;
 }
 .imagenes-sobre-container {
-  margin-top: -10rem; /* Ajustá esto para superponerlas visualmente */
+  margin-top: -10rem; 
   padding: 0 15rem;
   z-index: 2;
   position: relative;
@@ -539,11 +551,12 @@ height: auto;
   color: white;
   font-family: 'Jost', sans-serif;
   border: none;
-  font-size: 1rem;
+  font-size: 1.5rem;
   padding: 0.7rem 1.5rem;
   border-radius: 5px;
   z-index: 2;
   position: relative;
+  border-radius: 0;
 }
 .modal-content {
   border: 3px solid black !important;
@@ -557,6 +570,31 @@ height: auto;
   height: auto;
   transform: translateY(40%) rotate(23deg);
   z-index: 1;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+}
+
+.close {
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+footer img {
+max-width: 3rem;
 }
 .footer-link {
     font-family: 'Jost', sans-serif;
@@ -599,6 +637,10 @@ height: auto;
   }
     }
     @media (max-width: 576px) {
+      html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
       .fara-games-title-large {
         font-size: 2.5rem; 
         word-spacing: 5rem;
@@ -620,63 +662,406 @@ height: auto;
     margin-top: 0rem; 
   }
   .brillibrilli-container {
-    margin-top: -34rem; 
+    margin-top: -15rem; 
     max-width: 100 px;
+    bottom: 0;
     }
+    /* Ajustes para sección promo */
+  .promo-section {
+    margin-top: 5rem;
+    margin-bottom: -18rem;
+    text-align: center;
+  }
+
   .promo-text {
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    margin-left:-6rem;
-    
-  }
-    .mobicom-img {
-    width: 1rem;
-    margin-top: 0.5rem;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-  }
-  .custom-gradient-btn {
     font-size: 1.2rem;
-    padding: 0.8rem 2rem;
-    margin-top: 11rem;
+    padding: 0.5rem;
   }
-  .texto-vuelta {
-    font-size: 1.3rem;
-    padding: 1rem;
+
+  .custom-gradient-btn {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0;
+    margin-top: 1rem;
+    width: auto;
   }
-.juego-img-horizontal {
-    position: relative;
-    width: 150px;
-    cursor: pointer;
+
+  .mobicom-img {
+    max-width: 100px;
   }
-  .juego-img-horizontal:hover {
-    transform: scale(1.2);
-    z-index: 200;
-  }
-.memoria-text {
-margin-top: 7rem;
-  font-size: 1.8rem;
+.promo-section .order-2 {
+  order: 3 !important; /* mobicom va al final */
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
 }
-  .cuadrado-gradient {
-    width: 220px;
-    height: 150px;
-    margin: auto;
+
+.promo-section .order-2 img {
+  max-width: 250px !important;
+  height: auto !important;
+}
+  /* Texto vuelta */
+ .texto-vuelta {
+  display: flex;                    
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 0;
+  font-size: 1.2rem;
+  background-color: #FCDFFF;
+  font-family: "Jersey 15", sans-serif;
+  color: white;
+  margin: 1rem 0;                   
+  text-shadow:
+    -2px -2px 0 #E829FF,
+     2px -2px 0 #E829FF,
+    -2px  2px 0 #E829FF,
+     2px  2px 0 #E829FF;
+  width: 100vw;                     
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+.tweet-img-container {
+  margin-top: -5rem;
+  margin-bottom: 4rem;
+}
+
+  .tweet-img {
+    max-width: 100%;
+    border-radius: 0px;
   }
-  .cuadrado-1,
-  .cuadrado-2,
-  .cuadrado-3 {
-    margin: 0 auto;
-  }
-    .berta-img {
-    max-width: 60px;
+.tweet-zigzag-container {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+  /* GIF memoria */
+  .memoria-text {
+    font-size: 1.5rem;
     margin-top: 2rem;
   }
-    .cuadrado-gradient {
-    width: 150px;
-    height: 150px;
+
+  .juego-img-horizontal {
+    width: 130px;
+    left: 0.5rem;
   }
+
+  /* Cuadrados */
+  .cuadrado-gradient,
+  .cuadrado-superpuesto {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+  }
+
+  .cuadrado-label {
+    font-size: 2rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .cuadrado-borde-blanco1 h3,
+  .cuadrado-borde-blanco2 h3,
+  .cuadrado-borde-blanco3 h3 {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+
+  .img-corner-zolapa {
+    max-width: 80px;
+    bottom: 0;
+  }
+
+  /* Imagen compu */
+  .martinacompu-img {
+    max-width: 70%;
+    margin: 1rem auto;
+  }
+
+  /* Box Don Cirio */
+  .custom-box-title {
+    font-size: 1.8rem;
+  }
+
+  .custom-box h5 {
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+
+  /* Form final */
+  .final-container {
+    padding: 2rem 1rem;
+  }
+
+  .custom-submit-btn,
+  .btn-final {
+    width: 100% !important;
+    font-size: 1.2rem;
+  }
+
+  .berta-wrapper {
+    position: relative;
+    height: auto;
+    top: 7rem;
+  }
+
+  .berta-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 5.5rem; 
+    width: 5.5rem;
+    transform: none;
+    z-index: 10;
+  }
+
+  /* Modales */
+  .modal-body{
+    width: auto;
+    height: auto;
+  }
+  .modal-body p {
+    font-size: 1rem !important;
+  }
+
+  .btn-final {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .dino-modal-img {
+    max-width: 120px;
+    margin-top: 1.5rem;
+  }
+ /* Cuadrados */
+  .cuadrado-1{
+    width: 200px;
+    height: 150px;
+    position: relative !important;
+    margin: 1rem auto;
+    top: 0 !important;
+    left: 8rem !important;
+    right: 0 !important;
+  }
+  .cuadrado-2 {
+    width: 250px;
+    height: 150px;
+    position: relative !important;
+    margin: 1rem auto;
+    top: 0 !important;
+    left: 2rem !important;
+    right: 0 !important;
+  }
+  .cuadrado-3 {
+    width: 300px;
+    height: 150px;
+    position: relative !important;
+    margin: 1rem auto;
+    top: 0 !important;
+    left: 7rem !important;
+    right: 0 !important;
+  }
+  .cuadrado-1-superpuesto {
+    width: 200px;
+    height: 150px;
+    position: relative !important;
+    margin: 1rem auto;
+    top: -1rem !important;
+    left: -3rem !important;
+    right: 0 !important;
+  }
+  .cuadrado-2-superpuesto{
+    width: 250px;
+    height: 150px;
+    position: relative !important;
+    margin: 1rem auto;
+    top: -1rem !important;
+    left: -9rem !important;
+    right: 0 !important;
+  }
+  .cuadrado-3-superpuesto {
+    width: 300px;
+    height: 150px;
+    position: relative !important;
+    margin: 1rem auto;
+    top: -1rem !important;
+    left: -4rem !important;
+    right: 0 !important;
+  }
+  .cuadrado-borde-blanco1 {
+    width: 155px;
+    height: 115px;
+    border-width: 0.3rem;
+    padding: 0.5rem;
+  }
+  .cuadrado-borde-blanco2 {
+    width: 170px;
+    height: 120px;
+    border-width: 0.3rem;
+    padding: 0.5rem;
+  }
+  .cuadrado-borde-blanco3 {
+    width: 180px;
+    height: 120px;
+    border-width: 0.3rem;
+    padding: 0.5rem;
+  }
+
+  .cuadrado-borde-blanco1 h3,
+  .cuadrado-borde-blanco2 h3,
+  .cuadrado-borde-blanco3 h3 {
+    font-size: 0.7rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .cuadrado-label {
+    font-size: 1.2rem;
+    padding: 0.2rem 0.5rem;
+  }
+
+  /* Imágenes superpuestas */
+  .img-corner-zolapa {
+    height: 4rem;
+    bottom: -1.5rem;
+    left: -0.5rem;
+  }
+  .enemamartincirio {
+    display: block !important;
+    position: absolute;
+    top: 9.2rem;
+    left: 6rem;
+    max-width: 25rem;
+    height: 10rem;
+    object-fit: contain;
+    z-index: 10;
+  }
+   .martinsinremera{
+    top: 4.8rem;
+    width: 5rem;
+    height: 5.5rem;
+   }
+  .martinprincesa{
+    top: 4.8rem;
+    width: 4.5rem;
+    height: 5.5rem;
+  }
+  .martinfuneral{
+    top: 5.5rem;
+    width: 4.6rem;
+    height: 5rem;
+  }
+  .paloma{
+    left: 10rem;
+    top: 2rem;
+  }
+  .martinsinremera,
+  .martinprincesa,
+  .martinfuneral {
+    transform: translateX(-10%) rotate(0deg);
+  }
+
+  /* Sección final */
+  .final-container {
+    padding: 2rem 1rem;
+    padding-bottom: 6rem !important; 
+  }
+  
+  .textoform h5 {
+    font-size: 1rem;
+  }
+
+  .final-container input[type="text"],
+  .final-container input[type="email"] {
+    font-size: 1rem;
+  }
+.btn-final {
+  width: fit-content !important;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  
+}
+.custom-submit-btn {
+  width: fit-content !important;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  margin: 0 auto;
+  display: block;
+}
+.custom-box {
+  width: 90% !important;
+  margin: 2rem auto !important;
+  border-width: 3px;
+}
+.custom-box h2 {
+  padding: 0;
+  font-size: 1.3rem !important;
+}
+.custom-box h5 {
+  font-size: 0.8rem !important;
+  padding: 1rem 1rem !important;
+}
+.imagenes-sobre-container {
+  margin-bottom: -5rem;
+  
+}
+.imagen-borde-izquierda{
+  max-width: 8rem;
+  margin-left: -15rem;
+  margin-top: 5rem;
+}
+.imagen-borde-derecha{
+  max-width: 10rem;
+  margin-left: 7rem
+   
+}
+  /* Footer */
+  footer img[src*="palito.png"] {
+  display: none !important;
+}
+ footer .container-fluid,
+footer .d-flex {
+  flex-wrap: nowrap !important;
+  flex-direction: row !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
+  overflow-x: auto; 
+  white-space: nowrap;
+  
+}
+
+.footer-link {
+  font-size: 0.6rem;
+  margin: 0 0.2rem !important;
+  padding: 0;
+}
+
+footer img,
+footer .icon,
+footer .redessociales {
+  max-width: 1.5rem;
+  height: auto;
+  
+}
+.modal-content img {
+  width: 5rem;
+  top: 8rem;
+  z-index: 100;
+}
+
+.modal-title{
+  font-size: 0.9rem;
+}
+.modal-content {
+  justify-content: center;
+  right: 0rem;
+  width: 80% !important;
+  max-width: 360px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  border: 2px solid black !important;
+}
+.modal-body input[type="text"],
+.modal-body input[type="email"] {
+  font-size: 1rem !important;
+}
     }
